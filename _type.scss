@@ -1,0 +1,308 @@
+////////////////////////
+//  GOOGLE FONTS CDN  //
+////////////////////////
+//  @import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+//  @import url('//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+//  @import url('//fonts.googleapis.com/css?family=Oswald:300,400,700');
+//  @import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+//  @import url('//fonts.googleapis.com/css?family=Lato:400,700,900');
+
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('//fonts.googleapis.com/css?family=Oswald:300,400,600,700');
+@import url('//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import url('//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+
+html {
+	font-size: 100%;
+}
+
+
+body {
+	color: $type;
+	font-family: $roboto;
+	
+	@include small-down {
+		@include font-size(14px);
+	}
+	
+	@include medium {
+		@include font-size(15px);
+	}
+	
+	@include large {
+		@include font-size(16px);
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $headers;
+	font-weight: 500;
+	
+	.bap-wrapper-overlay & {
+		font-weight: 600;
+	}
+}
+
+h1, h2, h3 {
+//	font-family: $oswald;
+	font-family: $robo-condensed;
+	line-height: 1em;
+}
+
+h4, h5, h6 {
+	font-family: $roboto;
+	line-height: 1.25em;
+}
+
+h6 {
+	line-height: 1.5em
+}
+
+h1 {
+	
+	@include small-down {
+		@include font-size(44px);
+	}
+	
+	@include medium {
+		@include font-size(50px);
+	}
+	
+	@include large {
+		@include font-size(56px);
+	}
+	
+	&#page-title {
+		margin: 0 0 1em 0;
+		
+		&.hide {
+			display: none;
+		}
+	
+		&.adjust {
+			margin: $gutter;
+			padding: 0 $gutter;
+			
+			@include mobile {
+				margin: $mgutter;
+				padding: 0 $mgutter;
+			}
+			
+			@include small {
+				width: 740px;
+				margin: 50px auto 0 auto;
+			}
+			
+			@include medium {
+				width: 960px;
+				margin: 50px auto 0 auto;
+			}
+			
+			@include large {
+				width: 1180px;
+				margin: 50px auto 0 auto;
+			}
+		}
+	}
+	
+	&.mobile-site-name {
+		font-weight: 500;
+	}
+}
+
+h2 {
+	margin-top: 1em;
+	
+	@include small-down {
+		@include font-size(36px);
+	}
+	
+	@include medium {
+		@include font-size(42px);
+	}
+	
+	@include large {
+		@include font-size(46px);
+	}
+}
+
+h3 {
+	margin-top: 1em;
+	margin-bottom: .75em;
+	
+	@include small-down {
+		@include font-size(26px);
+	}
+	
+	@include medium {
+		@include font-size(32px);
+	}
+	
+	@include large {
+		@include font-size(38px);
+	}
+	
+	&.solo {
+		margin-bottom: .15em;
+	}
+	
+	&.paired {
+		margin-bottom: .5em;
+	}
+}
+
+h4 {
+	
+	@include small-down {
+		@include font-size(18px);
+	}
+	
+	@include medium {
+		@include font-size(20px);
+	}
+	
+	@include large {
+		@include font-size(24px);
+	}
+}
+
+h5 {
+	
+	@include small-down {
+		@include font-size(15px);
+	}
+	
+	@include medium {
+		@include font-size(16px);
+	}
+	
+	@include large {
+		@include font-size(22px);
+	}
+}
+
+h6 {
+	text-transform: uppercase;
+	
+	@include small-down {
+		@include font-size(13px);
+	}
+	
+	@include medium {
+		@include font-size(15px);
+	}
+	
+	@include large {
+		@include font-size(17px);
+	}
+}
+
+
+#{$a-tags} {
+	color: $green;
+	
+	&:hover {
+		color: $black;
+	}	
+}
+
+a {
+	h1, h2, h3, h4, h5, h6 {
+		color: $green;
+		text-decoration: none;
+	}
+	
+	&:hover {
+		color: $black;
+		h1, h2, h3, h4, h5, h6 {
+			text-decoration: underline;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {
+		color: $green;
+		text-decoration: none;
+
+		&:hover {
+			color: $black;
+			text-decoration: underline;
+		}
+	}	
+}
+
+p, li, blockquote {
+	font-weight: 300;
+	font-family: $roboto;
+
+	@include small-down {
+		@include font-size(14px);
+	}
+	
+	@include medium {
+		@include font-size(15px);
+	}
+	
+	@include large {
+		@include font-size(16px);
+	}
+
+	a {
+		color: $green;
+		text-decoration: underline;
+		
+		&:hover {
+			color: $black;
+			text-decoration: underline;
+		}		
+	}
+	
+	strong {
+		color: #002110;
+	}
+}
+
+p {
+	line-height: 1.75em;
+	font-family: $roboto;
+}
+
+ul, ol {
+	margin: .75em 0 1.5rem 1.5em;
+	margin: .75rem 0 1.5rem 1.5rem;
+	
+	li {
+		line-height: 1.5em;
+		margin-bottom: .75em;
+	}
+	
+	@include small-down {
+		&.partial-list {
+			margin-top: -1.15em;
+		}
+	}
+}
+
+.notes {
+	@include font-size(12px);
+	color: #666;
+	font-style: italic;
+	line-height: 1.35em;
+	
+	@include mobile {
+		@include font-size(9px);
+	}
+}
+
+.title {
+	margin-top: 0;
+}
+
+
+.alert-box {
+	ul {
+		font-size: 1em;
+		margin-bottom: 0;
+	}
+}
